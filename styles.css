@@ -1,0 +1,67 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Arial', sans-serif;
+    background-color: #f3f3f3;
+    overflow: hidden;
+  }
+  .clock {
+    font-size: 13vw;
+    color: #333;
+    text-align: center;
+    margin-top: 10vh;
+  }
+  .editor-buttons {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+  .editor {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    margin-top: 2vh;
+  }
+  .editor-buttons button {
+    margin-right: 10px;
+  }
+  #editableDiv {
+    flex: 1;
+    width: 100%;
+    border: none;
+    outline: none;
+    padding: 20px;
+    font-size: 1em;
+    background-color: transparent;
+    overflow-y: auto;
+  }
+  #editableDiv:empty:not(:focus):before {
+    content: attr(placeholder);
+    color: #ccc;
+  }
+  .toggle-buttons {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    cursor: pointer;
+  }
+  .toggle-buttons:before {
+    content: '👁️';
+  }
+  .toggle-buttons.hide:before {
+    content: '👁️‍🗨️';
+  }
+  .fullscreen-button {
+    position: fixed;
+    bottom: 60px;
+    right: 20px;
+    z-index: 1000;
+    cursor: zoom-in;   
+  }
+  .fullscreen-button:before {
+    content: '⛶';
+  }

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Horloge</title>
+    <link rel="shortcut icon" href="/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="clock" class="clock"></div>
+    <div class="editor-buttons" id="formatButtons">
+      <button onclick="formatText('bold')">Gras</button>
+      <button onclick="formatText('underline')">Souligné</button>
+      <button onclick="formatText('justifyCenter')">Centrer</button>
+      <button onclick="changeFontSize(1)">A+</button>
+      <button onclick="changeFontSize(-1)">A-</button>
+    </div>
+    <div class="editor">
+      <div id="editableDiv" contenteditable="true" placeholder="Commencez à écrire ici..."></div>
+    </div>
+
+    <button class="fullscreen-button" onclick="toggleFullScreen()"></button>
+    <button class="toggle-buttons" onclick="toggleFormatButtons()"></button>
+    
+    <script src="script.js"></script>
+    <script src="script-back.js"></script>
+</body>
+</html>
